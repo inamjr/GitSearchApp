@@ -1,7 +1,0 @@
-
-
-
-https://api.github.com/search/repositories?q=is:public project in:name language:python stars:>=500
-
-
-https://api.github.com/search/repositories?q=is:public%20project%20in:name%20language:python%20stars:%3E=500
