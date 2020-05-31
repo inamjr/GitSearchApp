@@ -1,0 +1,17 @@
+<p>items works!</p>
+<h1>this is items</h1>
+<button (click)="getStats()">Get info</button>
+
+<div>
+  <div class="card" style="width: 18rem;" *ngFor="let user of stat">
+    <div class="card-body">
+      <h3>Repository Id:{{ user.name }}</h3>
+      <h5 class="card-title">The name: {{ user.id }}</h5>
+      <h5 class="card-title">No Stars: {{ user.stargazers_count }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Url: {{ user.url }}</h6>
+      <p class="card-text">Description: {{ user.description }}</p>
+      <h6 class="card-link">Created date: {{ user.created_at }}</h6>
+      <h6 class="card-link">Last PushDate: {{ user.pushed_at }}</h6>
+    </div>
+  </div>
+</div>

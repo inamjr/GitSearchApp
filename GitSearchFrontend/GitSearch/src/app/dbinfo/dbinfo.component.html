@@ -1,0 +1,12 @@
+<p>dbinfo works!</p>
+<h1>this is dbinfo</h1>
+<button (click)="getdbInformation()">Get info</button>
+
+<div>
+  <div class="card" style="width: 18rem;" *ngFor="let user of statdb">
+    <div class="card-body">
+      <h3>Repository name:{{ user.name }}</h3>
+      <h5 class="card-title">The id: {{ user.sid }}</h5>
+    </div>
+  </div>
+</div>
