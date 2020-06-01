@@ -1,9 +1,6 @@
 <app-header></app-header>
-<div>.</div>
-<div></div>
-<p>items works!</p>
-<h1>this is items</h1>
-<button (click)="getStats()">Get info</button>
+
+<!-- <button (click)="getStats()">Get info</button>
 
 <div>
   <div class="card" style="width: 18rem;" *ngFor="let user of stat">
@@ -17,4 +14,60 @@
       <h6 class="card-link">Last PushDate: {{ user.pushed_at }}</h6>
     </div>
   </div>
-</div>
+</div> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container p-3 my-3  ">
+      <div class="container">
+        <h2>
+          <button
+            (click)="getStats()"
+            type="button"
+            class="btn btn-info btn-lg"
+          >
+          Click to 
+          </button>
+         To get info directly from GitHub Api
+          
+        </h2>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Repo Id</th>
+              <th>Name</th>
+              <th>Stars</th>
+              <th>Created Date</th>
+              <th>Last Push</th>
+              <th>Description</th>
+              <th>Url</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let user of stat">
+            <tr>
+              <td>{{ user.id }}</td>
+              <td>{{ user.name }}</td>
+              <td>{{ user.stargazers_count }}</td>
+              <td>{{ user.created_at }}</td>
+              <td>{{ user.pushed_at }}</td>
+              <td>{{ user.description }}</td>
+              <td>{{ user.url }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

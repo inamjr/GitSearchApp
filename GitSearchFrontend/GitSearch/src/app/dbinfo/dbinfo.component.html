@@ -1,19 +1,9 @@
 <app-header></app-header>
 
-<!-- <button (click)="getdbInformation()">Get info</button>
-
-<div>
-  <div class="card" style="width: 18rem;" *ngFor="let user of statdb">
-    <div class="card-body">
-      <h3>Repository name:{{ user.name }}</h3>
-      <h5 class="card-title">The id: {{ user.sid }}</h5>
-    </div>
-  </div>
-</div> -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Bootstrap Card</title>
+    <title>Bootstrap Example</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -26,58 +16,40 @@
   </head>
   <body>
     <div class="container">
-      <h2> <i class="fas fa-search"></i></h2>
-      <h2>
-        Click to see what's in The DataBase =>
-        <button type="button" class="btn btn-primary btn-lg">Info</button>
-      </h2>
-      <p>
-        The .card-deck class creates an
-        <strong>equal height and width</strong> grid of cards. The layout will
-        automatically adjust as you insert more cards.
-      </p>
-      <p>
-        In this example we have added extra content to the first card, to make
-        it taller. Notice how the other cards follow.
-      </p>
-      <p>
-        <strong>Note:</strong> The cards are displayed vertically on small
-        screens (less than 576px):
-      </p>
-      <div class="card-deck">
-        <div class="card bg-primary">
-          <div class="card bg-success">
-            <div class="card-body text-center">
-              <p class="card-text">Some text inside the third card</p>
-            </div>
-          </div>
-          <div class="card-body text-center">
-            <div class="card bg-danger">
-              <div class="card-body text-center">
-                <p class="card-text">Some text inside the fourth card</p>
-              </div>
-            </div>
-            <p class="card-text">Some text inside the first card</p>
-            <p class="card-text">Some more text to increase the height</p>
-            <p class="card-text">Some more text to increase the height</p>
-            <p class="card-text">Some more text to increase the height</p>
-          </div>
-          <div class="card bg-warning">
-            <div class="card-body text-center">
-              <p class="card-text">Some text inside the second card</p>
-            </div>
-          </div>
-        </div>
-      </div>
+        <h2>
+            Click to see The Data Base =>
+            <button
+              (click)="getdbInformation()"
+              type="button"
+              class="btn btn-primary btn-lg"
+            >
+              Pull Info
+            </button>
+          </h2>
+      <table  class="table table-bordered ">
+        <thead>
+          <tr>
+            <th>Repo Id</th>
+            <th>Name</th>
+            <th>Stars</th>
+            <th>Created Date</th>
+            <th>Last Push</th>
+            <th>Description</th>
+            <th>Url</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let user of statdb">
+          <tr>
+            <td>{{ user.repoId }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.numOfStars }}</td>
+            <td>{{ user.createdDate }}</td>
+            <td>{{ user.lastPushDate }}</td>
+            <td>{{ user.description }}</td>
+            <td>{{ user.url }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </body>
 </html>
-
-<footer class="py-5 bg-dark">
-  <div class="container">
-    <p class="m-0 text-center text-white">
-      Just a lilttle Proj By Anthony Ikeogu
-    </p>
-  </div>
-  <!-- /.container -->
-</footer>
