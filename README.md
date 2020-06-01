@@ -40,11 +40,11 @@ ng serve
 
 ......Backend
 
-All you need to do is connect the Backend to any DataBase of your choice, with the help of anotations.
- Object relational mapping in java enables you to bind columns to the fields of the entities with this anotations
- 
- 
+All you need to do, is connect the Backend to any DataBase of your choice, with the help of anotations.
+
 ![](Backend.PNG)
+
+Object relational mapping in java enables you to bind columns to the fields of the entities with this anotations.
 
 The Annotations Are......
 
@@ -77,9 +77,11 @@ The Annotations Are......
 	private int numOfStars;
 ```
 
-After the annotation is done in your src/main/resources file you need to configure your data base in Java with a 
-link(to your data base) username and passwordwhen. As soon connection is established, run the app to populate
-the database you should have this (as shown below)
+After the annotation is done, in your src/main/resources file you need to configure your data base in Java with a 
+link(to your data base) username and password, when the connection is established, run the app to populate
+the database. 
+
+Below is an image of how the backend should look.
 
 ![](Backend.PNG)
 
