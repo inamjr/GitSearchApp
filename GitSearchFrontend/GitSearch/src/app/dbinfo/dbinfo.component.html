@@ -1,12 +1,55 @@
-<p>dbinfo works!</p>
-<h1>this is dbinfo</h1>
-<button (click)="getdbInformation()">Get info</button>
+<app-header></app-header>
 
-<div>
-  <div class="card" style="width: 18rem;" *ngFor="let user of statdb">
-    <div class="card-body">
-      <h3>Repository name:{{ user.name }}</h3>
-      <h5 class="card-title">The id: {{ user.sid }}</h5>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+        <h2>
+            Click to see The Data Base =>
+            <button
+              (click)="getdbInformation()"
+              type="button"
+              class="btn btn-primary btn-lg"
+            >
+              Pull Info
+            </button>
+          </h2>
+      <table  class="table table-bordered ">
+        <thead>
+          <tr>
+            <th>Repo Id</th>
+            <th>Name</th>
+            <th>Stars</th>
+            <th>Created Date</th>
+            <th>Last Push</th>
+            <th>Description</th>
+            <th>Url</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let user of statdb">
+          <tr>
+            <td>{{ user.repoId }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.numOfStars }}</td>
+            <td>{{ user.createdDate }}</td>
+            <td>{{ user.lastPushDate }}</td>
+            <td>{{ user.description }}</td>
+            <td>{{ user.url }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </div>
-</div>
+  </body>
+</html>

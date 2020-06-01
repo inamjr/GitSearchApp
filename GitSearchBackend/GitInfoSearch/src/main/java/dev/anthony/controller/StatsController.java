@@ -1,6 +1,7 @@
 package dev.anthony.controller;
 
 
+import java.util.List;
 import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -30,8 +31,8 @@ public class StatsController {
 	//Read
 	@ResponseBody
 	@RequestMapping(value ="/stats",method = RequestMethod.GET)
-	public Set<ProjStats> getAllStats(){
-		return ss.getallStat();   // automatically turns objects to json
+	public List<ProjStats> getAllStats(){
+		return ss.getallStats();   // automatically turns objects to json
 	}
 	
 	//Create
