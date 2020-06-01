@@ -18,7 +18,7 @@ public interface StatsServices {
 	
 	Set<ProjStats> getallStat();
 	
-	List<ProjStats> getallStats( List<ProjStats> entities);
+	List<ProjStats> getallStats( );
 	
 	ProjStats updatestat(ProjStats sts);
 	
