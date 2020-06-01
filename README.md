@@ -41,9 +41,6 @@ ng serve
 ......Backend
 
 
-![](Backend.PNG)
-
-
 All you need to do, is connect the Backend to any DataBase of your choice, with the help of anotations.
 Object relational mapping in java enables you to bind columns to the fields of the entities with this anotations.
 
