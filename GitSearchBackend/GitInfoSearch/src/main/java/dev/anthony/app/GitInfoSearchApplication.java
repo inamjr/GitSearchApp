@@ -25,7 +25,9 @@ import dev.anthony.dao.StatsJDBCDAOImpl;
 import dev.anthony.entities.ProjStats;
 
 
+
 @SpringBootApplication
+
 @ComponentScan("dev.anthony")
 @EnableJpaRepositories("dev.anthony.repositories")
 @EntityScan("dev.anthony.entities")
