@@ -33,7 +33,10 @@ public class StatsServicesimpl implements StatsServices {
 		return st;
 	}
 	@Override
-	public List<ProjStats> getallStats() {
+
+	public List<ProjStats> getallStats( ) {
+
+	
 		List<ProjStats> st = new ArrayList<ProjStats>((Collection<? extends ProjStats>)sr.findAll());
 		return st;
 	}
