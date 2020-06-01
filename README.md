@@ -10,9 +10,9 @@ The stored data includes the repository ID, name, URL, created date, last push d
 
 The project is loosly coupled so the Backend and the Frontend can run independently.
 
-Persistence Layer(AWS RDS) writen in SQL with ACID Properties in mind with the helpof DBeaver(IDE).
-Backend Logic (not hosted) writen in Java using SpringBoot Framework with the help of Eclipse(IDE).
-Frontend (not hosted) writen in Typescript,html,css using Angular Framework with the help of VsCode(IDE).
+Persistence Layer(AWS RDS) writen in SQL with ACID Properties in mind with the help of DBeaver(IDE).
+Backend Logic(not hosted) writen in Java using SpringBoot Framework with the help of Eclipse(IDE).
+Frontend(not hosted) writen in Typescript,html,css using Angular's Framework with the help of VsCode(IDE).
 
 
 ## Installation/SetUp
