@@ -8,7 +8,7 @@ import { Stats } from './common/stats';
   providedIn: 'root',
 })
 export class SerchService {
-  private BackendUrl = 'http://localhost:9999/stats';
+  private BackendUrl = 'http://localhost:8080/stats';
   constructor(private http: HttpClient) {}
 
   getStat(): Observable<any> {
